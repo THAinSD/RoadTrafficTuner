@@ -1,0 +1,13 @@
+# Build output
+build/
+
+# X-Plane SDK - download it separately (see README.md)
+SDK/
+
+# macOS Finder files
+.DS_Store
+._*
+__MACOSX/
+
+# Windows
+Thumbs.db
