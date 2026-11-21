@@ -109,7 +109,7 @@ TERMS
 Road Traffic Tuner is free, open-source software released under the MIT
 License (see LICENSE.txt). It is provided "as is", without warranty of any
 kind; use it at your own risk. The source code is available at
-GITHUB_URL
+https://github.com/THAinSD/RoadTrafficTuner
 
 The override pack is built on your own computer from your own copy of
 X-Plane's road files. This download contains no Laminar Research files.
