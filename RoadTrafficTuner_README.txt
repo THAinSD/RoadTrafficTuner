@@ -6,7 +6,8 @@ making residential streets mostly empty while main roads and freeways stay
 busy. X-Plane's own files are never modified.
 
 Requirements: X-Plane 12 on Windows (64-bit) or macOS 12 or newer
-(Apple silicon or Intel).
+(Apple silicon or Intel). A Linux (64-bit) version is included but has not
+yet been tested in X-Plane; reports from Linux users are welcome.
 
 
 INSTALLING
@@ -109,7 +110,7 @@ TERMS
 Road Traffic Tuner is free, open-source software released under the MIT
 License (see LICENSE.txt). It is provided "as is", without warranty of any
 kind; use it at your own risk. The source code is available at
-GITHUB_URL
+https://github.com/THAinSD/RoadTrafficTuner
 
 The override pack is built on your own computer from your own copy of
 X-Plane's road files. This download contains no Laminar Research files.
