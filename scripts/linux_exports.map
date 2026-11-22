@@ -1,0 +1,13 @@
+/* Symbols the Linux plugin exposes: only X-Plane's five plugin entry points.
+   Everything else, including the bundled C++ runtime, stays private so it
+   cannot clash with X-Plane or other plugins. */
+{
+  global:
+    XPluginStart;
+    XPluginStop;
+    XPluginEnable;
+    XPluginDisable;
+    XPluginReceiveMessage;
+  local:
+    *;
+};

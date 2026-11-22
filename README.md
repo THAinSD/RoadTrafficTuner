@@ -95,6 +95,37 @@ Developer account.
    It is linked with the static C++ runtime, so users do not need a separate
    Visual C++ redistributable.
 
+## Building on Linux
+
+There are two ways, depending on what the build is for.
+
+**For your own use**, the CMake build works as on the Mac (with the SDK in
+place as described above):
+```
+cmake -S . -B build
+cmake --build build
+```
+The plugin appears at `build/RoadTrafficTuner/lin_x64/RoadTrafficTuner.xpl`.
+It depends on the build machine's C library and C++ runtime, so it may not run
+on older distributions.
+
+**For distribution**, use the release script, which builds the portable Linux
+plugin included in published releases:
+```
+pip install ziglang        # once, if Zig is not already installed
+scripts/build_linux_release.sh
+```
+The plugin appears at
+`build-linux/RoadTrafficTuner/lin_x64/RoadTrafficTuner.xpl`. It targets glibc
+2.17, so it runs on essentially any Linux that X-Plane 12 supports, bundles the
+C++ runtime, and exports only X-Plane's five plugin functions
+(`scripts/linux_exports.map`). The script checks those exports when it
+finishes. Zig can also build Linux binaries from macOS, but the script has
+only been tested on Linux.
+
+The published Linux build has not yet been tested in X-Plane on Linux; reports
+are welcome.
+
 ## Licensing notes
 
 - Road Traffic Tuner is released under the MIT License; see `LICENSE`.
@@ -110,3 +141,4 @@ Developer account.
 - `src/rtt_core.*` - all roads.net and file work, with no X-Plane dependencies
 - `src/rtt_plugin.cpp` - menu, window and startup check (X-Plane SDK)
 - `tests/test_core.cpp` - tests for the core, not part of the plugin build
+- `scripts/build_linux_release.sh` - builds the portable Linux release
